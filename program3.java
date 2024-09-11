@@ -25,26 +25,44 @@ class utility{
 	public static boolean isEven(long num){
 		
 		
+			if(num%2==0){
+			return true;
+			}
+			return false;
 		
 	}
 	public static boolean isOdd(long num){
 		
-		
+		if(num%2==0){
+			return false;
+			}
+			return true;
 		
 	}
 }
 
 
 
-class program_3	
+class program_3	{
 	public static void main(String[] args){
 		
 		long num = 12;
 		utility ul = new utility();
-		ul.isEven(num);
-		ul.isOdd(num);
-		ul.isPrime(num);
-		ul.factorial(num);
+		boolean Even =ul.isEven(num);
+		System.out.println("Is Even : "+Even);
+		
+		boolean Odd =ul.isOdd(num);
+		System.out.println("Is Odd: "+Odd);
+		
+		boolean Prime =ul.isPrime(num);
+		System.out.println("Is Prime: "+Prime);
+		
+		//boolean Even =ul.isEven(num);
+		//System.out.println(Even);
+		
+		
+		long fac = ul.factorial(num);
+		system.out.println("Fact = "+fac);
 		
 		
 		
