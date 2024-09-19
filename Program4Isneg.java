@@ -1,4 +1,4 @@
-
+import java.util.Scanner;
 public class Number {
     private double value;
 
@@ -41,12 +41,15 @@ public class Number {
     }
 
     public static void main(String[] args) {
-        Number num = new Number(5);
-        System.out.println(num.isZero()); 
-        System.out.println(num.isPositive()); 
-        System.out.println(num.isNegative()); 
-        System.out.println(num.isOdd());  
-        System.out.println(num.isEven());  
-        System.out.println(num.getFactorial());  
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter Value: ");
+        int n = sc.nextInt();
+        Number num = new Number(n);
+        System.out.println("Is "+n+" Zero? "+num.isZero()); 
+        System.out.println("Is "+n+" Positive number? "+num.isPositive()); 
+        System.out.println("Is "+n+" Negative number? "+num.isNegative()); 
+        System.out.println("Is "+n+" Odd number? "+num.isOdd());  
+        System.out.println("Is "+n+" Even number? "+num.isEven());  
+        System.out.println("Factorial of "+n+" is "+num.getFactorial());  
     }
 }
