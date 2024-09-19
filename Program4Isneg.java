@@ -42,11 +42,11 @@ public class Number {
 
     public static void main(String[] args) {
         Number num = new Number(5);
-        System.out.println(num.isZero());  // false
-        System.out.println(num.isPositive());  // true
-        System.out.println(num.isNegative());  // false
-        System.out.println(num.isOdd());  // true
-        System.out.println(num.isEven());  // false
-        System.out.println(num.getFactorial());  // 120.0
+        System.out.println(num.isZero()); 
+        System.out.println(num.isPositive()); 
+        System.out.println(num.isNegative()); 
+        System.out.println(num.isOdd());  
+        System.out.println(num.isEven());  
+        System.out.println(num.getFactorial());  
     }
 }
