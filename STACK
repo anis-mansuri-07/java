@@ -1,0 +1,80 @@
+import java.util.Scanner;
+
+class stack{
+           int max;
+           int []arr = new int[max];
+
+           stack(int c){
+            this.max = c;
+           }
+            public int push(int top,int ele){
+                if(top==max-1){
+                    System.out.println("Full");
+                }else{
+                    top++;
+                    arr[top] = ele;
+                }
+
+
+                return top;
+            }
+           public int pop(int top){
+            if(top==-1){
+                System.out.println("Empty..");
+            }else{
+                System.out.println(arr[top]+" Is deleted...");
+                arr[top] =  0;
+                top--;
+
+            }
+
+            return top;
+        }
+        void display(int top){
+
+        if(top==-1){
+            System.out.println("empty...");
+        }else{
+            for(int i=0;i<=top;i++){
+                System.out.println(arr[i]);
+            }
+        }
+        }
+}
+
+public class JP_6{
+    public static void main(String[] args) {
+        int top = -1;
+        Scanner sc = new Scanner();
+        System.out.println("Enter Array Size :: ");
+        int sizee = sc.nextInt();
+       stack s = new stack(sizee);
+       int choice = 0;
+       System.out.println("1.Push\n2.Pop\n3.Display\n4.Exit");
+       while (choice!=4) {
+        System.out.println("Enter Choice:: ");
+        choice = sc.nextInt();
+        switch (choice) {
+            case 1:
+            System.out.println("Enter ele::  ");
+                int ele = sc.nextInt();
+                top = s.push(top,ele);
+                 break;
+
+            case 2:   
+            top = s.pop(top);
+           break;
+
+           case 3:s.display(top);
+           break;
+
+           case 4: System.out.println("Thank You..");
+           break;
+
+            default:System.out.println(:"Enter valid value..");
+                break;
+           }
+       }
+       
+    }
+}
